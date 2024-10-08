@@ -1,251 +1,472 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
 
-<html>
-	<head>
-		<title>Nickson Mokua</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nickson Mokua</title>
 
-			<!-- Header -->
-				<section id="header" class="wrapper">
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-					<!-- Logo -->
-						<div id="logo">
-							<h1 class="typed-text" id="typed-text"><a href="index.html"></a></h1>
-							<p>Full-Stack Web Developer</p>
-						</div>
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li class="current"><a href="#">Home</a></li>
-								<li class="current"><a href="#">Technologies</a></li>
-								
-								</li>
-								<li class="current"><a href="#">Projects</a></li>
-								<li class="current"><a href="#">View CV</a></li>
-								<li class="current"><a href="#">Contacts</a></li>
-							</ul>
-						</nav>
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-				</section>
+   
+</head>
 
-			<!-- Intro -->
-				<section id="intro" class="wrapper style1">
-					<div class="title">Technologies</div>
-					<div class="container">
-						<p class="style1">Transforming mere ideas into pixel-perfect realities using the magic of these technologies.</p>
-						<div class="slider-container" style="background-color: rgb(255, 255, 255); position: relative; overflow: hidden;">
-							<div class="slides-wrapper">
-							  <div class="slide">
-								 <!-- Content for slide 1 -->
-								 <img src="https://logowik.com/content/uploads/images/492_html5.jpg" alt="HTML Logo">
-								</div>
-								<div class="slide">
-									<!-- Content for slide 1 -->
-									<img src="data:image/png;base64,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" alt="css Logo">
-								  </div>
-								<div class="slide">
-								  <!-- Content for slide 2 -->
-								  <img src="data:image/png;base64,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" alt="React Logo">
-								</div>
-								<div class="slide">
-								  <!-- Content for slide 3 -->
-								  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/512px-Unofficial_JavaScript_logo_2.svg.png?20141107110902" alt="JavaScript Logo">
-								</div>
-								<div class="slide">
-									<!-- Content for slide 4 -->
-									<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-_3uc5bIQxho5sW5dMyBkTycGMBrsFVkg3p7P9Z-auJrCw5xjghPCRwYSeRtxmFzbmT4&usqp=CAU" alt="python Logo">
-								</div>
-								<div class="slider-controls">
-									<button class="prev" onclick="moveSlide(-1)">&#10094; Prev</button>
-<button class="next" onclick="moveSlide(1)">Next &#10095;</button>
-								</div>
-							</div>
-						</ul>
-					</div>
-				</section>
 
-			<!-- Main -->
-				<section id="main" class="wrapper style2">
-					<div class="title">About</div>
-					<p class="word">I'm a dedicated software engineer with a strong passion for crafting high-performance, user-focused software solutions. With a hands-on experience in software engineering, I bring a wealth of expertise across various programming languages and technologies, including JavaScript, CSS, Tailwind CSS, Python, React, Flask, and HTML.<br><br/>
+<body id="top">
 
-						I excel in fast-paced environments and enjoy collaborating with diverse teams to drive innovation and deliver solutions that surpass user expectations. My commitment to continuous learning and adapting to emerging technologies fuels my enthusiasm for taking on new challenges and contributing to groundbreaking projects.<br><br/>
-						
-						I am eager to apply my skills and knowledge to make a meaningful impact and help shape the future of tech.<br><br/>
-					</p><br><br/>
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 
-					
 
-			<!-- Highlights -->
-				<section id="highlights" class="wrapper style3">
-					<div class="title">Projects</div>
-					<div class="container">
-						<div class="row aln-center">
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-									
-									<p></p>
-									<ul class="actions">
-										
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-									
-				
-									<ul class="actions">
-										
-									</ul>
-								</section>
-							</div>
-							<div class="col-4 col-12-medium">
-								<section class="highlight">
-									<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-									
-									<ul class="actions">
-										
-									</ul>
-								</section>
-					
-		
-				</section>
-				<div class="container">
-					<div class="row aln-center">
-						<div class="col-4 col-12-medium">
-							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								
-								<p></p>
-								<ul class="actions">
-									
-								</ul>
-							</section>
-						</div>
-						<div class="col-4 col-12-medium">
-							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								
-			
-								<ul class="actions">
-									
-								</ul>
-							</section>
-						</div>
-						<div class="col-4 col-12-medium">
-							<section class="highlight">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								
-								<ul class="actions">
-									
-								</ul>
-							</section>
-						
-						</section>
+    <!-- page wrap
+    ================================================== -->
+    <div id="page" class="s-pagewrap">
 
-			<!-- Footer -->
-				<section id="footer" class="wrapper">
-					<div class="title">Contacts</div>
-					
-						
-						<div class="row">
-							<div class="col-6 col-12-medium">
 
-								<!-- Contact Form -->
-									<section>
-										<form method="post" action="#">
-											<div class="row gtr-50">
-												<div class="col-6 col-12-small">
-													<input type="text" name="name" id="contact-name" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-small">
-													<input type="text" name="email" id="contact-email" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<textarea name="message" id="contact-message" placeholder="Message" rows="4"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" class="style1" value="Send" /></li>
-														<li><input type="reset" class="style2" value="Reset" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+        <!-- # site header 
+        ================================================== -->
+        <header class="s-header">
+            <div class="row s-header__inner">
 
-							</div>
-							<div class="col-6 col-12-medium">
+                <div class="s-header__block">
+                    <div class="s-header__logo">
+                        <a class="logo" href="index.html">
+                            <img src="images/logo.svg" alt="Homepage">
+                        </a>
+                    </div>
 
-								<!-- Contact -->
-									<section class="feature-list small">
-										<div class="row">
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-home"><Address></Address></h3>
-													<p class="namba">
-														Utawala<br />
-														Nairobi<br />
-														Kenya
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-comment">Socials</h3>
-													<p>
-														<li><a href="https://github.com/NICKSONMOGAKA" target="_blank"class="icon brands fa-github"><span class="label">Github</span></a></li>
-						
-														<li><a href="https://www.linkedin.com/in/nicksonmogaka/"target="_blank"class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-														<li><a href="https://www.instagram.com/nick_mokua/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					</ul>
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-envelope">Email</h3>
-													<p>
-														<a href="mailto:nickmogaka@gmail.com" target="_blank">nickmogaka@gmail.com</a>
-													</p>
-												</section>
-											</div>
-											<div class="col-6 col-12-small">
-												<section>
-													<h3 class="icon solid fa-phone">Phone</h3>
-													<p class="namba">
-														0738553094
-													</p>
-												</section>
-											</div>
-										</div>
-									</section>
+                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
+                </div> <!-- end s-header__block -->
 
-							</div>
-						</div>
-						<footer>
-						<div id="copyright">
-							<ul>
-								<li class="namba">&copy; 2024.</li><li class="namba">All Rights Reserved.</li></footer>
-							</ul>
-						</div>
-				
+                <nav class="s-header__nav">    
+                    <ul class="s-header__menu-links">
+                        <li class="current"><a class="smoothscroll" href="#intro">Home</a></li>
+                        <li><a class="smoothscroll" href="#about">About</a></li>
+                        <li><a class="smoothscroll" href="#works">Projects</a></li>
+                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
+                        <li><a class="smoothscroll" href="">View CV</a></li>
+                    </ul> <!-- s-header__menu-links -->    
+                </nav> <!-- end s-header__nav -->
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+            </div> <!-- end s-header__inner -->
+        </header> <!-- end s-header -->
 
-	</body>
+
+        <!-- # intro
+        ================================================== -->
+        <section id="intro" class="s-intro target-section">
+
+            <div class="row s-intro__content width-sixteen-col">
+                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
+                    
+                    <div class="s-intro__content-text">
+
+                        <p class="s-intro__content-title">Hello,</p>
+                        <h1 class="s-intro__content-title">
+                        I'm Nickson Mokua.
+                         
+                        <p class="s-intro_content-title">
+                            <span id="typed-text"></span>
+                         </p>
+                        <script src="main.js"></script>
+                        </h1>                            
+
+                        <div class="s-intro__content-btns">
+                            <a class="smoothscroll btn" href="#about">About Me</a>
+                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
+                        </div> <!-- s-intro__content-btns -->   
+
+                    </div> <!-- s-intro__content-text -->                     
+                    
+                </div> <!-- s-intro__content-inner -->  
+            </div> <!-- s-intro__content -->
+
+            <ul class="s-intro__social social-list">
+                <li>
+                    <a href="https://www.linkedin.com/in/nicksonmogaka/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        <span class="u-screen-reader-text">LinkedIn</span>
+                    </a>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/NICKSONMOGAKA">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        <span class="u-screen-reader-text">Github</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/nick_mokua/">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                            <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                            </svg>
+                        <span class="u-screen-reader-text">Instagram</span>
+                    </a>
+                </li>
+              
+               
+            </ul> <!-- end s-intro__social -->
+
+            <div class="s-intro__content-media">                               
+                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
+            </div> <!-- s-intro__content-media -->                
+
+            <div class="s-intro__btn-download">
+         
+            </div> <!-- end s-intro__btn-download -->
+            
+          
+        </section> <!-- end s-intro -->
+
+
+        <!-- # about
+        ================================================== -->
+        <section id="about" class="s-about target-section">
+
+            <div class="row s-about__content">
+                <div class="column xl-12">    
+                    
+                    <div class="section-header" data-num="01">
+                        <h2 class="text-display-title">About Me.</h2>
+                    </div> <!-- end section-header -->
+
+                    <p class="attention-getter">I'm a dedicated software engineer with a strong passion for crafting high-performance, user-focused software solutions. With a hands-on experience in software engineering, I bring a wealth of expertise across various programming languages and technologies, including JavaScript, CSS, Tailwind CSS, Python, React, Flask, and HTML.<br>
+
+                        I excel in fast-paced environments and enjoy collaborating with diverse teams to drive innovation and deliver solutions that surpass user expectations. My commitment to continuous learning and adapting to emerging technologies fuels my enthusiasm for taking on new challenges and contributing to groundbreaking projects.
+                        
+                        <br>I am eager to apply my skills and knowledge to make a meaningful impact and help shape the future of tech.
+                    </p>
+
+                    <div class="grid-list-items s-about__blocks">
+
+                        <div class="grid-list-items__item s-about__block">
+                           
+
+                        <div class="grid-list-items__item s-about__block">
+                            
+                        
+                        <br><br/>
+                            <h4 class="s-about__block-title">Technologies/Skills</h4>
+
+                            <ul class="s-about__list">
+                                <li>
+                                    HTML/CSS: Proficient in structuring content and styling applications.
+                                </li>
+                                <li>
+                                    JavaScript: Knowledge of core JavaScript concepts and libraries.
+                                </li>
+                                <li>
+                                    Frameworks: Experience with front-end frameworks like React, Angular, or Vue.js.
+                                </li>
+                                <li>
+                                    Responsive Design: Ability to create mobile-friendly interfaces using tools like Bootstrap or media queries.
+
+                                </li>
+                                <li>
+                                    Server-Side Languages: Proficiency in languages like Node.js, Python, Ruby, Java, or PHP.
+                                </li>
+                                <li>
+                                    Database Management: Familiarity with SQL databases (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB).
+                                </li>
+                                <li>
+                                    API Development: Skills in building and consuming RESTful and GraphQL APIs.
+                                </li>
+                            </ul>
+                        </div> <!--end s-about__block -->
+
+                    </div> <!-- grid-list-items -->
+
+                </div> <!--end column -->
+            </div> <!--end s-about__content -->
+            
+        </section> <!-- end s-about -->   
+
+
+
+        <!-- # works
+        ================================================== -->
+        <section id="works" class="s-works target-section">
+
+            <div class="row">
+                <div class="column xl-12">
+                    <div class="section-header" data-num="02">
+                        <h2 class="text-display-title">Projects.</h2>
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row folio-entries">
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-turban.jpg" class="entry__link glightbox" data-glightbox="title: White Knit Cap; description: .entry__desc-01">
+                        <div class="entry__thumb">
+                            <img src="images/folio/white_turban.jpg" srcset="images/folio/white_turban.jpg 1x, images/folio/white_turban@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">White Knit Cap</h4>
+                            <div class="entry__cat">Frontend Design</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-01">
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-woodcraft.jpg" class="entry__link glightbox" data-glightbox="title: WoodCraft; description: .entry__desc-02">
+                        <div class="entry__thumb">
+                            <img src="images/folio/woodcraft.jpg" srcset="images/folio/woodcraft.jpg 1x, images/folio/woodcraft@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">WoodCraft</h4>
+                            <div class="entry__cat">Product Design</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-02">
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-tulips.jpg" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
+                        <div class="entry__thumb">
+                            <img src="images/folio/caffeine_and_tulips.jpg" srcset="images/folio/caffeine_and_tulips.jpg 1x, images/folio/caffeine_and_tulips@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Caffeine & Tulips</h4>
+                            <div class="entry__cat">Brand Identity</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-03">
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-grayscale.jpg" class="entry__link glightbox" data-glightbox="title: Grayscale; description: .entry__desc-04">
+                        <div class="entry__thumb">
+                            <img src="images/folio/grayscale.jpg" srcset="images/folio/grayscale.jpg 1x, images/folio/grayscale@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Grayscale</h4>
+                            <div class="entry__cat">Product Design</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-04">
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-lamp.jpg" class="entry__link glightbox" data-glightbox="title: The Lamp; description: .entry__desc-05">
+                        <div class="entry__thumb">
+                            <img src="images/folio/lamp.jpg" srcset="images/folio/lamp.jpg 1x, images/folio/lamp@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">The Lamp</h4>
+                            <div class="entry__cat">Brand Identity</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-05">
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry -->
+
+                <div class="column entry">
+                    <a href="images/folio/gallery/g-tropical.jpg" class="entry__link glightbox" data-glightbox="title: Tropical; description: .entry__desc-06">
+                        <div class="entry__thumb">
+                            <img src="images/folio/tropical.jpg" srcset="images/folio/tropical.jpg 1x, images/folio/tropical@2x.jpg 2x" alt="">
+                        </div>
+                        <div class="entry__info">
+                            <h4 class="entry__title">Tropical</h4>
+                            <div class="entry__cat">Frontend Design</div>
+                        </div>
+                    </a>
+
+                    <div class="glightbox-desc entry__desc-06">
+                        <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
+                        deleniti facilis ab, tempora non! Nisi, tempora provident.
+                        <a href="https://www.behance.net/">Project Link</a>.
+                        </p>
+                    </div>
+                </div> <!-- entry --> 
+
+            </div> <!-- folio entries -->
+
+
+        <!-- # numbers
+        ================================================== -->
+
+        <!-- # footer 
+        ================================================== -->
+        <footer id="footer" class="s-footer target-section">
+
+            <div class="row">
+                <div class="column lg-12">
+                    <div class="section-header light-on-dark" data-num="03">
+                        <h2 class="text-display-title">Contact.</h2>
+                    
+                    </div> <!-- end section-header -->
+                </div>
+            </div>
+
+            <div class="row s-footer__content">
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
+                    <form action="your-server-side-script" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                      
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                      
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                      
+                        <button type="submit">Submit</button>
+                      </form>
+                               
+                </div> <!-- end section-footer__about -->
+
+                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
+                    <div class="row">
+                        <div class="column xl-4 lg-5 md-6 tab-12">
+                            <h5>Follow Me</h5>
+                            <ul class="link-list">
+                               
+                                <li><a href="https://www.linkedin.com/in/nicksonmogaka/">LinkedIn</a></li>
+                                <li><a href="https://www.instagram.com/nick_mokua/">Instagram</a></li>
+                                <li><a href="https://github.com/NICKSONMOGAKA">Github</a></li>
+
+                               
+                               
+                            </ul>
+                        </div>
+                        <div class="column xl-6 md-6 tab-12">
+                            <h5>Contact Me</h5>
+                            <ul class="link-list">
+                                <li><a href="mailto:nickmogaka@gmail.com">nickmogaka@gmail.com</a></li><br>
+                                <li><a href="tel:+1975432345">+254738553094</a></li>
+                            </ul> 
+                        </div>
+                    </div>                    
+                </div> <!-- end section-footer__site-links -->
+
+            </div> <!-- end section-footer__content -->
+
+
+            <div class="row s-footer__buttons">
+               
+                <div class="column xl-6 tab-12">
+                    <a href="mailto:nickmogaka@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
+                </div>
+          
+                <div class="column xl-6 tab-12">                    
+                  
+                </div>
+            
+            </div> <!-- end section-footer__buttons -->              
+            
+            <div class="row s-footer__bottom">
+                
+                <div class="column xl-6 lg-12">
+                    <ul class="s-footer__social social-list">
+                       
+                        <li>
+                            <a href="https://github.com/NICKSONMOGAKA">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                                <span class="u-screen-reader-text">Github</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/nicksonmogaka/">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                                <span class="u-screen-reader-text">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/nick_mokua/">
+                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                                    <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
+                                    </svg>
+                                <span class="u-screen-reader-text">Instagram</span>
+                            </a>
+                        </li>
+                    </ul> 
+                </div> <!-- end section-footer__social -->
+
+                <div class="column xl-6 lg-12">
+                    <p class="ss-copyright">
+                        <span>©2024.All Rights Reserved</span> 
+                
+                    </p>
+                </div>
+
+            </div> <!-- end section-footer__bottom -->          
+
+           
+            
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
 </html>
