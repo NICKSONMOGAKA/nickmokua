@@ -1,472 +1,280 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" >
+<html lang="en">
 <head>
-
-    <!--- basic page needs
-    ================================================== -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nickson Mokua</title>
-
-<link rel="icon" href="images/favicon.ico" type="image/x-icon">
-
-    <script>
-        document.documentElement.classList.remove('no-js');
-        document.documentElement.classList.add('js');
-    </script>
-
-    <!-- CSS
-    ================================================== -->
-    <link rel="stylesheet" href="css/vendor.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-   
-</head>
-
-
-<body id="top">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader" class="dots-fade">
-            <div></div>
-            <div></div>
-            <div></div>
+<!-- ---------------  UNICONS---------------->
+<link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+<!--  ----------------CSS------------- -->
+
+<link rel="stylesheet" href="assets/css/style.css">
+<!-- ------------FAVICON-------------- -->
+
+<link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <title>Nickson Mokua</title>
+</head>
+<body>
+    <div class="container">
+
+    <!-- -------------HEADER------------------------- -->
+<nav id="header">
+    <div class="nav-logo">
+        <p class="nav-name">NM</p>
+        <span>.</span>
+    </div>
+    <div class="nav-menu" id="myNavMenu">
+        <ul class="nav_menu_list">
+            <li class="nav_list">
+                <a href="#home" class="nav-link active-link">Home</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="#about" class="nav-link">About</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="#projects" class="nav-link">Projects</a>
+                <div class="circle"></div>
+            </li>
+            <li class="nav_list">
+                <a href="#contact" class="nav-link">Contact</a>
+                <div class="circle"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="nav-button">
+        <button class="btn">View CV <i class="uil uil-file-alt"></i></button>
+    </div>
+    <div class="nav-menu-btn">
+        <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+    </div>
+    
+</nav>
+
+
+    <!-- -------------MAIN ----------------------- -->
+
+
+   <main class="wrapper">
+
+    <!-- ---------------- FEATURED  BOX------------- -->
+    <section class="featured-box" id="home">
+
+        <div class="featured-text">
+            <div class="featured-text-card">
+                <span>Hi, I'm Nickson Mokua.</span>
+            </div>
+            <div class="featured-name">
+                <p><span class="typedText">Designer</span></p>
+            </div>
+            <div class="featured-text-info">
+                <p>Exprienced frontend developer with a passion for creating visually stunning
+                    and user-friendly websites.
+                </p>
+            </div>
+            <div class="featured-text-btn">
+                <a href="#contact"><button class="btn blue-btn">Start a conversation</button></a>
+                
+            </div>
+            <div class="social_icons">
+                <div class="icon">
+                    <a href="https://www.instagram.com/nick_mokua/" target="_blank"><i class="uil uil-instagram"></i></div></a>
+                <div class="icon">
+                   <a href="https://www.linkedin.com/in/nicksonmogaka/" target="_blank"><i class="uil uil-linkedin-alt"></i></div></a>
+    
+                <div class="icon">
+                  <a href="https://github.com/NICKSONMOGAKA" target="_blank">  <i class="uil uil-github-alt"></i></div></a>
+            </div>
+        </div>
+
+        <div class="featured-image">
+            <div class="image">
+                <img src="assets/images/pic04.jpg" alt="avatar">
+            </div>
+        </div>
+        <div class="scroll-icon-box">
+            <a href="#about" class="scroll-btn">
+                <i class="uil uil-mouse-alt"></i>
+                <p>Scroll Down</p>
+            </a>
+        </div>
+
+    </section>
+
+
+    <!-- ----------- ABOUT  BOX------------------ -->
+    
+    <section class="section" id="about">
+        <div class="top-header">
+            <h1>About Me</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="about-info" id="about-info">
+                    <h3>My introduction</h3>
+                    <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge 
+                        frameworks and libraries, which allows me to implement interactive features.
+                        Additionally, I have exprirence working with content management systems (CMS)
+                        Wordpress.
+                    </p>
+                   
+                </div>
+            </div>
+            <div class="col">
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>Bootstrap</span>
+                        <span>JavaScript</span>
+                        <span>Vue</span>
+                        <span>React</span>
+                        <span>Angular</span>
+                    </div>
+                </div>
+
+
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>PHP</span>
+                        <span>JAVA</span>
+                        <span>Python</span>
+                        <span>C++</span>
+                    </div>
+                </div>
+
+                <div class="skills-box">
+                    <div class="skills-header">
+                        <h3>Database</h3>
+                    </div>
+                    <div class="skills-list">
+                        <span>MySQL</span>
+                        <span>PostgreSQL</span>
+                        <span>MongoDB</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------- PROJECT BOX------------------ -->
+<section class="section" id="projects">
+    <div class="top-header">
+        <h1>Projects</h1>
+    </div>
+    <div class="project-container">
+        <div class="project-box">
+            <i class="uil uil-briefcase-alt"></i>
+            <h3>Completed</h3>
+            <label>School Projects</label>
+
+        </div>
+        <div class="project-box">
+            <i class="uil uil-users-alt"></i>
+            <h3>Completed</h3>
+            <label>Clients Projects</label>
+
+        </div>
+        <div class="project-box">
+            <i class="uil uil-award"></i>
+            <h3>Completed</h3>
+            <label>Personal Projects</label>
+
+        </div>
+    </div>
+</section>
+
+    <!-- ----------- CONTACT BOX------------------ -->
+    <div class="section" id="contact">
+        <div class="top-header">
+            <h1>Get in touch</h1>
+           <span>Do you have a project in your mind, contact me here</span>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="contact-info">
+                    <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                    <p><i class="uil uil-envelope"> Email: nickmogaka@gmail.com</i></p>
+                    <p><i class="uil uil-phone"></i>Tel: +254738553094</p>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-control">
+                    <div class="form-inputs">
+                        <input type="text" name="" id="" class="input-field" placeholder="Name">
+                        <input type="text" name="" id="" class="input-field" placeholder="Email">
+                    </div>
+                    <div class="text-area">
+                        <textarea placeholder="Message..."></textarea>
+                    </div>
+                    <div class="form-button">
+                        <button class="btn">Send <i class="uil uil-message"></i></button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 
-    <!-- page wrap
-    ================================================== -->
-    <div id="page" class="s-pagewrap">
+   </main>
 
 
-        <!-- # site header 
-        ================================================== -->
-        <header class="s-header">
-            <div class="row s-header__inner">
+    <!-- --------------FOOTER------------------ -->
+<footer>
+    <div class="top-footer">
+        <p>Nickson Mokua.</p>
+    </div>
+    <div class="middle-footer">
+        <ul class="footer-menu">
+            <li class="footer_menu_list">
+                <a href="#home">Home</a>
+            </li>
+            <li class="footer_menu_list">
+                <a href="#about">About</a>
+            </li>
+            <li class="footer_menu_list">
+                <a href="#project">Projects</a>
+            </li>
+            <li class="footer_menu_list">
+                <a href="#contact">Contact</a>
+            </li>
+        </ul>
+    </div>
+    <div class="footer-socail-icons">
+        <div class="icon">
+            <a href="https://www.instagram.com/nick_mokua/" target="_blank"><i class="uil uil-instagram"></i></div></a>
+        <div class="icon">
+           <a href="https://www.linkedin.com/in/nicksonmogaka/" target="_blank"><i class="uil uil-linkedin-alt"></i></div></a>
 
-                <div class="s-header__block">
-                    <div class="s-header__logo">
-                        <a class="logo" href="index.html">
-                            <img src="images/logo.svg" alt="Homepage">
-                        </a>
-                    </div>
+        <div class="icon">
+          <a href="https://github.com/NICKSONMOGAKA" target="_blank">  <i class="uil uil-github-alt"></i></div></a>
+    </div>
+    </div>
+    <div class="bottom-footer">
+<p>Copyright &copy; <a href="#home" style="text-decoration: none;">NM</a>-All right reserved</p>
+    </div>
+</footer>
 
-                    <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
-                </div> <!-- end s-header__block -->
-
-                <nav class="s-header__nav">    
-                    <ul class="s-header__menu-links">
-                        <li class="current"><a class="smoothscroll" href="#intro">Home</a></li>
-                        <li><a class="smoothscroll" href="#about">About</a></li>
-                        <li><a class="smoothscroll" href="#works">Projects</a></li>
-                        <li><a class="smoothscroll" href="#footer">Contact</a></li>
-                        <li><a class="smoothscroll" href="">View CV</a></li>
-                    </ul> <!-- s-header__menu-links -->    
-                </nav> <!-- end s-header__nav -->
-
-            </div> <!-- end s-header__inner -->
-        </header> <!-- end s-header -->
-
-
-        <!-- # intro
-        ================================================== -->
-        <section id="intro" class="s-intro target-section">
-
-            <div class="row s-intro__content width-sixteen-col">
-                <div class="column lg-12 s-intro__content-inner grid-block grid-16">
-                    
-                    <div class="s-intro__content-text">
-
-                        <p class="s-intro__content-title">Hello,</p>
-                        <h1 class="s-intro__content-title">
-                        I'm Nickson Mokua.
-                         
-                        <p class="s-intro_content-title">
-                            <span id="typed-text"></span>
-                         </p>
-                        <script src="main.js"></script>
-                        </h1>                            
-
-                        <div class="s-intro__content-btns">
-                            <a class="smoothscroll btn" href="#about">About Me</a>
-                            <a class="smoothscroll btn btn--stroke" href="#footer">Get In Touch</a>
-                        </div> <!-- s-intro__content-btns -->   
-
-                    </div> <!-- s-intro__content-text -->                     
-                    
-                </div> <!-- s-intro__content-inner -->  
-            </div> <!-- s-intro__content -->
-
-            <ul class="s-intro__social social-list">
-                <li>
-                    <a href="https://www.linkedin.com/in/nicksonmogaka/">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                        <span class="u-screen-reader-text">LinkedIn</span>
-                    </a>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/NICKSONMOGAKA">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                        <span class="u-screen-reader-text">Github</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/nick_mokua/">
-                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                            <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
-                            </svg>
-                        <span class="u-screen-reader-text">Instagram</span>
-                    </a>
-                </li>
-              
-               
-            </ul> <!-- end s-intro__social -->
-
-            <div class="s-intro__content-media">                               
-                <img src="images/intro-bg.jpg" srcset="images/intro-bg.jpg 1x, images/intro-bg.jpg 2x" alt="">
-            </div> <!-- s-intro__content-media -->                
-
-            <div class="s-intro__btn-download">
-         
-            </div> <!-- end s-intro__btn-download -->
-            
-          
-        </section> <!-- end s-intro -->
+</div>
 
 
-        <!-- # about
-        ================================================== -->
-        <section id="about" class="s-about target-section">
+    <!-- -------------TYPING JS LINK---------------- -->
 
-            <div class="row s-about__content">
-                <div class="column xl-12">    
-                    
-                    <div class="section-header" data-num="01">
-                        <h2 class="text-display-title">About Me.</h2>
-                    </div> <!-- end section-header -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!--  ----------------- SCROLL REVEAL JS LINK ---------------- -->
 
-                    <p class="attention-getter">I'm a dedicated software engineer with a strong passion for crafting high-performance, user-focused software solutions. With a hands-on experience in software engineering, I bring a wealth of expertise across various programming languages and technologies, including JavaScript, CSS, Tailwind CSS, Python, React, Flask, and HTML.<br>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!----------------------- MAIN JS----------------------- -->
 
-                        I excel in fast-paced environments and enjoy collaborating with diverse teams to drive innovation and deliver solutions that surpass user expectations. My commitment to continuous learning and adapting to emerging technologies fuels my enthusiasm for taking on new challenges and contributing to groundbreaking projects.
-                        
-                        <br>I am eager to apply my skills and knowledge to make a meaningful impact and help shape the future of tech.
-                    </p>
-
-                    <div class="grid-list-items s-about__blocks">
-
-                        <div class="grid-list-items__item s-about__block">
-                           
-
-                        <div class="grid-list-items__item s-about__block">
-                            
-                        
-                        <br><br/>
-                            <h4 class="s-about__block-title">Technologies/Skills</h4>
-
-                            <ul class="s-about__list">
-                                <li>
-                                    HTML/CSS: Proficient in structuring content and styling applications.
-                                </li>
-                                <li>
-                                    JavaScript: Knowledge of core JavaScript concepts and libraries.
-                                </li>
-                                <li>
-                                    Frameworks: Experience with front-end frameworks like React, Angular, or Vue.js.
-                                </li>
-                                <li>
-                                    Responsive Design: Ability to create mobile-friendly interfaces using tools like Bootstrap or media queries.
-
-                                </li>
-                                <li>
-                                    Server-Side Languages: Proficiency in languages like Node.js, Python, Ruby, Java, or PHP.
-                                </li>
-                                <li>
-                                    Database Management: Familiarity with SQL databases (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB).
-                                </li>
-                                <li>
-                                    API Development: Skills in building and consuming RESTful and GraphQL APIs.
-                                </li>
-                            </ul>
-                        </div> <!--end s-about__block -->
-
-                    </div> <!-- grid-list-items -->
-
-                </div> <!--end column -->
-            </div> <!--end s-about__content -->
-            
-        </section> <!-- end s-about -->   
-
-
-
-        <!-- # works
-        ================================================== -->
-        <section id="works" class="s-works target-section">
-
-            <div class="row">
-                <div class="column xl-12">
-                    <div class="section-header" data-num="02">
-                        <h2 class="text-display-title">Projects.</h2>
-                    </div> <!-- end section-header -->
-                </div>
-            </div>
-
-            <div class="row folio-entries">
-
-                <div class="column entry">
-                    <a href="images/folio/gallery/g-turban.jpg" class="entry__link glightbox" data-glightbox="title: White Knit Cap; description: .entry__desc-01">
-                        <div class="entry__thumb">
-                            <img src="images/folio/white_turban.jpg" srcset="images/folio/white_turban.jpg 1x, images/folio/white_turban@2x.jpg 2x" alt="">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">White Knit Cap</h4>
-                            <div class="entry__cat">Frontend Design</div>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-01">
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
-                        deleniti facilis ab, tempora non! Nisi, tempora provident.
-                        <a href="https://www.behance.net/">Project Link</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/gallery/g-woodcraft.jpg" class="entry__link glightbox" data-glightbox="title: WoodCraft; description: .entry__desc-02">
-                        <div class="entry__thumb">
-                            <img src="images/folio/woodcraft.jpg" srcset="images/folio/woodcraft.jpg 1x, images/folio/woodcraft@2x.jpg 2x" alt="">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">WoodCraft</h4>
-                            <div class="entry__cat">Product Design</div>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-02">
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
-                        deleniti facilis ab, tempora non! Nisi, tempora provident.
-                        <a href="https://www.behance.net/">Project Link</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/gallery/g-tulips.jpg" class="entry__link glightbox" data-glightbox="title: Caffeine & Tulips; description: .entry__desc-03">
-                        <div class="entry__thumb">
-                            <img src="images/folio/caffeine_and_tulips.jpg" srcset="images/folio/caffeine_and_tulips.jpg 1x, images/folio/caffeine_and_tulips@2x.jpg 2x" alt="">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">Caffeine & Tulips</h4>
-                            <div class="entry__cat">Brand Identity</div>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-03">
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
-                        deleniti facilis ab, tempora non! Nisi, tempora provident.
-                        <a href="https://www.behance.net/">Project Link</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/gallery/g-grayscale.jpg" class="entry__link glightbox" data-glightbox="title: Grayscale; description: .entry__desc-04">
-                        <div class="entry__thumb">
-                            <img src="images/folio/grayscale.jpg" srcset="images/folio/grayscale.jpg 1x, images/folio/grayscale@2x.jpg 2x" alt="">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">Grayscale</h4>
-                            <div class="entry__cat">Product Design</div>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-04">
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
-                        deleniti facilis ab, tempora non! Nisi, tempora provident.
-                        <a href="https://www.behance.net/">Project Link</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/gallery/g-lamp.jpg" class="entry__link glightbox" data-glightbox="title: The Lamp; description: .entry__desc-05">
-                        <div class="entry__thumb">
-                            <img src="images/folio/lamp.jpg" srcset="images/folio/lamp.jpg 1x, images/folio/lamp@2x.jpg 2x" alt="">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">The Lamp</h4>
-                            <div class="entry__cat">Brand Identity</div>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-05">
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
-                        deleniti facilis ab, tempora non! Nisi, tempora provident.
-                        <a href="https://www.behance.net/">Project Link</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry -->
-
-                <div class="column entry">
-                    <a href="images/folio/gallery/g-tropical.jpg" class="entry__link glightbox" data-glightbox="title: Tropical; description: .entry__desc-06">
-                        <div class="entry__thumb">
-                            <img src="images/folio/tropical.jpg" srcset="images/folio/tropical.jpg 1x, images/folio/tropical@2x.jpg 2x" alt="">
-                        </div>
-                        <div class="entry__info">
-                            <h4 class="entry__title">Tropical</h4>
-                            <div class="entry__cat">Frontend Design</div>
-                        </div>
-                    </a>
-
-                    <div class="glightbox-desc entry__desc-06">
-                        <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                        Inventore ipsum iste soluta fugiat, impedit illum ducimus 
-                        deleniti facilis ab, tempora non! Nisi, tempora provident.
-                        <a href="https://www.behance.net/">Project Link</a>.
-                        </p>
-                    </div>
-                </div> <!-- entry --> 
-
-            </div> <!-- folio entries -->
-
-
-        <!-- # numbers
-        ================================================== -->
-
-        <!-- # footer 
-        ================================================== -->
-        <footer id="footer" class="s-footer target-section">
-
-            <div class="row">
-                <div class="column lg-12">
-                    <div class="section-header light-on-dark" data-num="03">
-                        <h2 class="text-display-title">Contact.</h2>
-                    
-                    </div> <!-- end section-header -->
-                </div>
-            </div>
-
-            <div class="row s-footer__content">
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__about">                    
-                    <form action="your-server-side-script" method="POST">
-                        <label for="name">Name:</label>
-                        <input type="text" id="name" name="name" required>
-                      
-                        <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required>
-                      
-                        <label for="message">Message:</label>
-                        <textarea id="message" name="message" required></textarea>
-                      
-                        <button type="submit">Submit</button>
-                      </form>
-                               
-                </div> <!-- end section-footer__about -->
-
-                <div class="column xl-6 md-12 s-footer__block s-footer__site-links">
-                    <div class="row">
-                        <div class="column xl-4 lg-5 md-6 tab-12">
-                            <h5>Follow Me</h5>
-                            <ul class="link-list">
-                               
-                                <li><a href="https://www.linkedin.com/in/nicksonmogaka/">LinkedIn</a></li>
-                                <li><a href="https://www.instagram.com/nick_mokua/">Instagram</a></li>
-                                <li><a href="https://github.com/NICKSONMOGAKA">Github</a></li>
-
-                               
-                               
-                            </ul>
-                        </div>
-                        <div class="column xl-6 md-6 tab-12">
-                            <h5>Contact Me</h5>
-                            <ul class="link-list">
-                                <li><a href="mailto:nickmogaka@gmail.com">nickmogaka@gmail.com</a></li><br>
-                                <li><a href="tel:+1975432345">+254738553094</a></li>
-                            </ul> 
-                        </div>
-                    </div>                    
-                </div> <!-- end section-footer__site-links -->
-
-            </div> <!-- end section-footer__content -->
-
-
-            <div class="row s-footer__buttons">
-               
-                <div class="column xl-6 tab-12">
-                    <a href="mailto:nickmogaka@gmail.com" class="btn btn--primary btn--large u-fullwidth">Message Me</a>
-                </div>
-          
-                <div class="column xl-6 tab-12">                    
-                  
-                </div>
-            
-            </div> <!-- end section-footer__buttons -->              
-            
-            <div class="row s-footer__bottom">
-                
-                <div class="column xl-6 lg-12">
-                    <ul class="s-footer__social social-list">
-                       
-                        <li>
-                            <a href="https://github.com/NICKSONMOGAKA">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
-                                <span class="u-screen-reader-text">Github</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/nicksonmogaka/">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                                <span class="u-screen-reader-text">LinkedIn</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/nick_mokua/">
-                                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
-                                    <path d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"></path>
-                                    </svg>
-                                <span class="u-screen-reader-text">Instagram</span>
-                            </a>
-                        </li>
-                    </ul> 
-                </div> <!-- end section-footer__social -->
-
-                <div class="column xl-6 lg-12">
-                    <p class="ss-copyright">
-                        <span>©2024.All Rights Reserved</span> 
-                
-                    </p>
-                </div>
-
-            </div> <!-- end section-footer__bottom -->          
-
-           
-            
-        </footer> <!-- end s-footer -->
-
-    </div> <!-- end page-wrap -->
-
-
-    <!-- Java Script
-    ================================================== -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
-
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
