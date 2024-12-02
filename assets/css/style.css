@@ -14,7 +14,7 @@
   --first-color-hover: rgb(40, 91, 212);
 
   --second-color: rgb(0, 201, 255);
-  --third-color: rgb(192, 166, 49);
+  --third-color: rgb(68, 68, 68);
   --first-shadow-color: rgb(0, 0, 0, 0.1);
 }
 
@@ -56,6 +56,7 @@ html {
   border-radius: 10px;
   cursor: pointer;
   transition: 0.4s;
+  color: black;
 }
 .btn > i {
   margin-left: 10px;
