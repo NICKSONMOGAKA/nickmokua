@@ -44,9 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
   new Typed(".typedtext", {
     strings: ["Software Engineer", "Full-Stack Developer", "Web Developer"],
     loop: true,
-    typeSpeed: 100,   // Increased value for slower typing
-    backSpeed: 50,    // Increased value for slower backspacing
-    backDelay: 3000,  // Delay before backspacing starts (in milliseconds)
+    typeSpeed: 10000000,   // Increased value for slower typing
+    backSpeed: 10000000,    // Increased value for slower backspacing
+    backDelay: 10000000,  // Delay before backspacing starts (in milliseconds)
     showCursor: true, // Optional: Show blinking cursor
   });
 });

@@ -591,16 +591,24 @@ footer {
     flex-direction: column;
     row-gap: 30px;
     background: #f8f8f8;
-    padding-block: 40px 60px;
+    padding-block: 20px; /* Adjust padding as needed */
+    width: 1275px; /* Ensure the footer spans the full width */
+    margin-top: auto; /* Pushes the footer to the bottom of the page */
+    box-sizing: content-box; /* Ensures padding and borders are included in the width */
 }
 
 .top-footer p {
     font-size: 25px;
     font-weight: 600;
+    margin: 0; /* Remove default margin for better alignment */
 }
 
 .middle-footer .footer-menu {
     display: flex;
+    justify-content: center; /* Center the menu items */
+    gap: 20px; /* Add spacing between menu items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
 .footer_menu_list {
@@ -611,17 +619,24 @@ footer {
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
-    margin-inline: 20px;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer_menu_list a:hover {
+    color: var(--first-color); /* Change color on hover */
 }
 
 .footer-socail-icons {
     display: flex;
+    justify-content: center; /* Center the social icons */
     gap: 30px;
+    margin: 0; /* Remove default margin */
 }
 
 .bottom-footer {
     font-size: 14px;
     text-align: center;
+    margin-top: 1px; /* Add spacing above the bottom footer */
 }
 
 /* ------- MEDIA QUERY == 1024px / RESPONSIVE ------- */
