@@ -1,21 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script> <!-- Include Typed.js -->
     <title>Nickson Mokua</title>
 </head>
-
 <body>
     <div class="container">
-
+        <video id="background-video" autoplay loop muted>
+            <source src="https://videos.pexels.com/video-files/29470941/12686080_2560_1440_30fps.mp4" type="video/mp4">
+        </video>
         <!-- HEADER -->
         <header id="header">
-            <nav>
+            <nav role="navigation" aria-label="Main Navigation">
                 <div class="nav-logo">
                     <p class="nav-name">NM</p>
                     <span>.</span>
@@ -44,10 +45,8 @@
                 </div>
             </nav>
         </header>
-
         <!-- MAIN CONTENT -->
         <main class="wrapper">
-
             <!-- FEATURED BOX -->
             <section class="featured-box" id="home">
                 <div class="featured-text">
@@ -55,7 +54,7 @@
                         <span>Hi, I'm Nickson Mokua.</span>
                     </div>
                     <div class="featured-name">
-                        <p><span class="typedText">Software Engineer</span></p>
+                        <p><span class="typedtext">Software Engineer</span></p>
                     </div>
                     <div class="featured-text-info">
                         <p>Experienced Full-Stack developer with a passion for creating visually stunning and user-friendly websites.</p>
@@ -64,9 +63,9 @@
                         <a href="#contact"><button class="btn blue-btn">Start a conversation</button></a>
                     </div>
                     <div class="social_icons">
-                        <div class="icon"><a href="https://www.instagram.com/nick_mokua/" target="_blank"><i class="uil uil-instagram"></i></a></div>
-                        <div class="icon"><a href="https://www.linkedin.com/in/nicksonmogaka/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
-                        <div class="icon"><a href="https://github.com/NICKSONMOGAKA" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+                        <div class="icon"><a href="https://www.instagram.com/nick_mokua/" target="_blank" aria-label="Instagram Profile"><i class="uil uil-instagram"></i></a></div>
+                        <div class="icon"><a href="https://www.linkedin.com/in/nicksonmogaka/" target="_blank" aria-label="LinkedIn Profile"><i class="uil uil-linkedin-alt"></i></a></div>
+                        <div class="icon"><a href="https://github.com/NICKSONMOGAKA" target="_blank" aria-label="GitHub Profile"><i class="uil uil-github-alt"></i></a></div>
                     </div>
                 </div>
                 <div class="featured-image">
@@ -81,7 +80,6 @@
                     </a>
                 </div>
             </section>
-
             <!-- ABOUT BOX -->
             <section class="section" id="about">
                 <div class="top-header">
@@ -132,7 +130,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- PROJECT BOX -->
             <section class="section" id="projects">
                 <div class="top-header">
@@ -159,7 +156,6 @@
                     </div>
                 </div>
             </section>
-
             <!-- CONTACT BOX -->
             <section class="section" id="contact">
                 <div class="top-header">
@@ -170,29 +166,29 @@
                     <div class="col">
                         <div class="contact-info">
                             <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
-                            <p><i class="uil uil-envelope"> Email: nickmogaka@gmail.com</i></p>
-                            <p><i class="uil uil-phone"></i>Tel: +254721995763</p>
+                            <p><i class="uil uil-envelope"></i> Email: nickmogaka@gmail.com</p>
+                            <p><i class="uil uil-phone"></i> Tel: +254721995763</p>
                         </div>
                     </div>
                     <div class="col">
-                        <div class="form-control">
-                            <div class="form-inputs">
-                                <input type="text" name="name" id="name" class="input-field" placeholder="Name" required>
-                                <input type="email" name="email" id="email" class="input-field" placeholder="Email" required>
+                        <form action="/submit" method="POST" onsubmit="return validateForm()">
+                            <div class="form-control">
+                                <div class="form-inputs">
+                                    <input type="text" name="name" id="name" class="input-field" placeholder="Name" required>
+                                    <input type="email" name="email" id="email" class="input-field" placeholder="Email" required>
+                                </div>
+                                <div class="text-area">
+                                    <textarea name="message" placeholder="Message..." required></textarea>
+                                </div>
+                                <div class="form-button">
+                                    <button type="submit" class="btn">Send <i class="uil uil-message"></i></button>
+                                </div>
                             </div>
-                            <div class="text-area">
-                                <textarea placeholder="Message..." required></textarea>
-                            </div>
-                            <div class="form-button">
-                                <button class="btn">Send <i class="uil uil-message"></i></button>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </section>
-
         </main>
-
         <!-- FOOTER -->
         <footer>
             <div class="top-footer">
@@ -207,14 +203,12 @@
                 </ul>
             </div>
             <div class="footer-socail-icons">
-                <div class="icon"><a href="https://www.instagram.com/nick_mokua/" target="_blank"><i class="uil uil-instagram"></i></a></div>
-                <div class="icon"><a href="https://www.linkedin.com/in/nicksonmogaka/" target="_blank"><i class="uil uil-linkedin-alt"></i></a></div>
-                <div class="icon"><a href="https://github.com/NICKSONMOGAKA" target="_blank"><i class="uil uil-github-alt"></i></a></div>
+                <div class="icon"><a href="https://www.instagram.com/nick_mokua/" target="_blank" aria-label="Instagram Profile"><i class="uil uil-instagram"></i></a></div>
+                <div class="icon"><a href="https://www.linkedin.com/in/nicksonmogaka/" target="_blank" aria-label="LinkedIn Profile"><i class="uil uil-linkedin-alt"></i></a></div>
+                <div class="icon"><a href="https://github.com/NICKSONMOGAKA" target="_blank" aria-label="GitHub Profile"><i class="uil uil-github-alt"></i></a></div>
             </div>
         </footer>
-
     </div>
-
     <!-- JavaScript for Dropdown Functionality -->
     <script>
         function myMenuFunction() {
@@ -222,20 +216,54 @@
             navMenu.classList.toggle("responsive");
         }
 
-        // Optional: Close dropdown when clicking outside
-        window.onclick = function(event) {
-            if (!event.target.matches('.nav-menu-btn') && !event.target.matches('.nav-link')) {
-                const dropdowns = document.getElementsByClassName("dropdown");
-                for (let i = 0; i < dropdowns.length; i++) {
-                    const openDropdown = dropdowns[i];
-                    if (openDropdown.style.display === "block") {
-                        openDropdown.style.display = "none";
-                    }
+        // Add click event listeners for dropdown menus
+        document.querySelectorAll('.nav_list').forEach(item => {
+            item.addEventListener('click', function () {
+                const dropdown = this.querySelector('.dropdown');
+                if (dropdown) {
+                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
                 }
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        window.onclick = function (event) {
+            if (!event.target.matches('.nav-link') && !event.target.matches('.uil-bars')) {
+                document.querySelectorAll('.dropdown').forEach(dropdown => {
+                    dropdown.style.display = 'none';
+                });
             }
+        };
+
+        // Initialize Typed.js
+        document.addEventListener("DOMContentLoaded", function () {
+            var typed = new Typed('.typedtext', {
+                strings: ["Software Engineer", "Full-Stack Developer", "Problem Solver"],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
+            });
+        });
+
+        // Form Validation
+        function validateForm() {
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.querySelector('textarea').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(email)) {
+                alert('Please enter a valid email address.');
+                return false;
+            }
+
+            return true;
         }
     </script>
-
 </body>
-
 </html>

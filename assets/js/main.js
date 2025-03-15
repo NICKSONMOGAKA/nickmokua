@@ -1,15 +1,27 @@
 // ----------- NAVIGATION BAR FUNCTION -----------
 // Toggles the "responsive" class to make the navigation menu mobile-friendly
 function myMenuFunction() {
-  var menuBtn = document.getElementById("myNavMenu");
-
-  // Toggle the "responsive" class based on the current state
-  menuBtn.classList.toggle("responsive");
+  const navMenu = document.getElementById("myNavMenu");
+  navMenu.classList.toggle("responsive");
 }
+
+// Optional: Close dropdown when clicking outside
+window.onclick = function (event) {
+  if (!event.target.matches('.nav-menu-btn') && !event.target.matches('.nav-link')) {
+    const dropdowns = document.getElementsByClassName("dropdown");
+    for (let i = 0; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.style.display === "block") {
+        openDropdown.style.display = "none";
+      }
+    }
+  }
+};
 
 // -------------- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----------
 window.onscroll = function () {
   headerShadow();
+  scrollActive(); // Ensure active link updates on scroll
 };
 
 // Adds or removes shadow to the navigation bar on scroll
@@ -28,12 +40,15 @@ function headerShadow() {
 }
 
 // -------- TYPING EFFECT ---------------
-var typingEffect = new Typed(".typedText", {
-  strings: ["Software Engineer", "Full-Stack Developer", "Web Developer"],
-  loop: true,
-  typeSpeed: 100,
-  backSpeed: 80,
-  backDelay: 2000,
+document.addEventListener("DOMContentLoaded", function () {
+  new Typed(".typedtext", {
+    strings: ["Software Engineer", "Full-Stack Developer", "Web Developer"],
+    loop: true,
+    typeSpeed: 100,   // Increased value for slower typing
+    backSpeed: 50,    // Increased value for slower backspacing
+    backDelay: 3000,  // Delay before backspacing starts (in milliseconds)
+    showCursor: true, // Optional: Show blinking cursor
+  });
 });
 
 // -------- SCROLL REVEAL ANIMATION ---------------
@@ -49,7 +64,7 @@ sr.reveal(".featured-text-card", {});
 sr.reveal(".featured-name", { delay: 100 });
 sr.reveal(".featured-text-info", { delay: 200 });
 sr.reveal(".featured-text-btn", { delay: 200 });
-sr.reveal(".socail_icons", { delay: 200 });
+sr.reveal(".social_icons", { delay: 200 }); // Fixed typo: "socail_icons" -> "social_icons"
 sr.reveal(".featured-image", { delay: 300 });
 
 // --- PROJECT BOX ---
@@ -91,16 +106,16 @@ function scrollActive() {
   const scrollY = window.scrollY;
 
   sections.forEach((current) => {
-    const sectionHeight = current.offsetHeight,
-      sectionTop = current.offsetTop - 50,
-      sectionId = current.getAttribute("id");
+    const sectionHeight = current.offsetHeight;
+    const sectionTop = current.offsetTop - 50;
+    const sectionId = current.getAttribute("id");
 
     // If section is in view, add active-link class, else remove it
-    const link = document.querySelector(".nav-menu a[href*=" + sectionId + "]");
+    const link = document.querySelector(`.nav-menu a[href*="${sectionId}"]`);
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      link.classList.add("active-link");
+      link?.classList.add("active-link"); // Use optional chaining to avoid errors
     } else {
-      link.classList.remove("active-link");
+      link?.classList.remove("active-link");
     }
   });
 }
@@ -117,7 +132,7 @@ function updateMenuOnResize() {
 
   // If the screen width is less than 768px (mobile/tablet size), toggle the menu automatically
   if (width < 768) {
-    menuBtn.classList.remove("responsive");  // Ensure it starts collapsed on mobile
+    menuBtn.classList.remove("responsive"); // Ensure it starts collapsed on mobile
   } else {
     menuBtn.classList.add("responsive"); // Always show menu on larger screens
   }
