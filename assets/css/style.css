@@ -513,7 +513,7 @@ footer {
     row-gap: 30px;
     background: #f8f8f8;
     padding-block: 20px; /* Adjust padding as needed */
-    width: 1275px; /* Ensure the footer spans the full width */
+    width: 100%; /* Ensure the footer spans the full width */
     margin-top: auto; /* Pushes the footer to the bottom of the page */
     box-sizing: content-box; /* Ensures padding and borders are included in the width */
 }
