@@ -171,7 +171,7 @@
                         </div>
                     </div>
                     <div class="col">
-                        <form action="/submit" method="POST" onsubmit="return validateForm()">
+                        <form action="/submit" method="POST">
                             <div class="form-control">
                                 <div class="form-inputs">
                                     <input type="text" name="name" id="name" class="input-field" placeholder="Name" required>
@@ -209,61 +209,5 @@
             </div>
         </footer>
     </div>
-    <!-- JavaScript for Dropdown Functionality -->
-    <script>
-        function myMenuFunction() {
-            const navMenu = document.getElementById("myNavMenu");
-            navMenu.classList.toggle("responsive");
-        }
-
-        // Add click event listeners for dropdown menus
-        document.querySelectorAll('.nav_list').forEach(item => {
-            item.addEventListener('click', function () {
-                const dropdown = this.querySelector('.dropdown');
-                if (dropdown) {
-                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-                }
-            });
-        });
-
-        // Close dropdowns when clicking outside
-        window.onclick = function (event) {
-            if (!event.target.matches('.nav-link') && !event.target.matches('.uil-bars')) {
-                document.querySelectorAll('.dropdown').forEach(dropdown => {
-                    dropdown.style.display = 'none';
-                });
-            }
-        };
-
-        // Initialize Typed.js
-        document.addEventListener("DOMContentLoaded", function () {
-            var typed = new Typed('.typedtext', {
-                strings: ["Software Engineer", "Full-Stack Developer", "Problem Solver"],
-                typeSpeed: 50,
-                backSpeed: 30,
-                loop: true
-            });
-        });
-
-        // Form Validation
-        function validateForm() {
-            const name = document.getElementById('name').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const message = document.querySelector('textarea').value.trim();
-
-            if (!name || !email || !message) {
-                alert('Please fill out all fields.');
-                return false;
-            }
-
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailPattern.test(email)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            return true;
-        }
-    </script>
 </body>
 </html>

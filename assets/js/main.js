@@ -2,33 +2,30 @@
 // Toggles the "responsive" class to make the navigation menu mobile-friendly
 function myMenuFunction() {
   const navMenu = document.getElementById("myNavMenu");
-  navMenu.classList.toggle("responsive");
+  if (!navMenu.classList.contains("responsive")) {
+    navMenu.classList.add("responsive");
+  } else {
+    navMenu.classList.remove("responsive");
+  }
 }
 
 // Optional: Close dropdown when clicking outside
 window.onclick = function (event) {
   if (!event.target.matches('.nav-menu-btn') && !event.target.matches('.nav-link')) {
-    const dropdowns = document.getElementsByClassName("dropdown");
-    for (let i = 0; i < dropdowns.length; i++) {
-      const openDropdown = dropdowns[i];
-      if (openDropdown.style.display === "block") {
-        openDropdown.style.display = "none";
+    Array.from(document.getElementsByClassName("dropdown")).forEach((dropdown) => {
+      if (dropdown.style.display === "block") {
+        dropdown.style.display = "none";
       }
-    }
+    });
   }
 };
 
 // -------------- ADD SHADOW ON NAVIGATION BAR WHILE SCROLLING ----------
-window.onscroll = function () {
-  headerShadow();
-  scrollActive(); // Ensure active link updates on scroll
-};
-
-// Adds or removes shadow to the navigation bar on scroll
 function headerShadow() {
   const navHeader = document.getElementById("header");
+  const scrollThreshold = 50;
 
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if (document.body.scrollTop > scrollThreshold || document.documentElement.scrollTop > scrollThreshold) {
     navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
     navHeader.style.height = "70px";
     navHeader.style.lineHeight = "70px";
@@ -38,16 +35,17 @@ function headerShadow() {
     navHeader.style.lineHeight = "90px";
   }
 }
+window.addEventListener("scroll", headerShadow);
 
 // -------- TYPING EFFECT ---------------
 document.addEventListener("DOMContentLoaded", function () {
   new Typed(".typedtext", {
     strings: ["Software Engineer", "Full-Stack Developer", "Web Developer"],
     loop: true,
-    typeSpeed: 10000000,   // Increased value for slower typing
-    backSpeed: 10000000,    // Increased value for slower backspacing
-    backDelay: 10000000,  // Delay before backspacing starts (in milliseconds)
-    showCursor: true, // Optional: Show blinking cursor
+    typeSpeed: 50, // Normal typing speed
+    backSpeed: 30, // Normal backspacing speed
+    backDelay: 1000, // Delay before backspacing starts
+    showCursor: true, // Show blinking cursor
   });
 });
 
@@ -56,7 +54,6 @@ const sr = ScrollReveal({
   origin: "top",
   distance: "80px",
   duration: 2000,
-  reset: true,
 });
 
 // --- HOME ---
@@ -80,7 +77,6 @@ const srLeft = ScrollReveal({
   origin: "left",
   distance: "80px",
   duration: 2000,
-  reset: true,
 });
 
 srLeft.reveal(".about-info", { delay: 100 });
@@ -91,50 +87,49 @@ const srRight = ScrollReveal({
   origin: "right",
   distance: "80px",
   duration: 2000,
-  reset: true,
 });
 
 srRight.reveal(".skills-box", { delay: 100 });
 srRight.reveal(".form-control", { delay: 100 });
 
 // ------------- CHANGE ACTIVE LINK -----------------
-
 // Detects the section currently in view and adds an "active-link" class to the corresponding menu item
 const sections = document.querySelectorAll("section[id]");
 
 function scrollActive() {
   const scrollY = window.scrollY;
+  let activeFound = false;
 
   sections.forEach((current) => {
     const sectionHeight = current.offsetHeight;
     const sectionTop = current.offsetTop - 50;
     const sectionId = current.getAttribute("id");
 
-    // If section is in view, add active-link class, else remove it
     const link = document.querySelector(`.nav-menu a[href*="${sectionId}"]`);
     if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-      link?.classList.add("active-link"); // Use optional chaining to avoid errors
+      link?.classList.add("active-link");
+      activeFound = true;
     } else {
       link?.classList.remove("active-link");
     }
   });
-}
 
-// Adding scroll event listener to highlight the active link
+  if (!activeFound) {
+    document.querySelector(".nav-menu a.active-link")?.classList.remove("active-link");
+  }
+}
 window.addEventListener("scroll", scrollActive);
 
 // ------------- RESPONSIVE NAVIGATION ENHANCEMENTS -----------------
-
 // Adjust the display and behavior of the navigation menu based on screen size
 function updateMenuOnResize() {
   const menuBtn = document.getElementById("myNavMenu");
   const width = window.innerWidth;
 
-  // If the screen width is less than 768px (mobile/tablet size), toggle the menu automatically
   if (width < 768) {
-    menuBtn.classList.remove("responsive"); // Ensure it starts collapsed on mobile
+    menuBtn.classList.remove("responsive"); // Collapse menu on mobile
   } else {
-    menuBtn.classList.add("responsive"); // Always show menu on larger screens
+    menuBtn.classList.remove("responsive"); // Keep menu collapsed on larger screens
   }
 }
 
