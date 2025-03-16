@@ -1,5 +1,6 @@
 /* --------- POPPINS FONT LINK ------ */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap");
+
 /* ------------ VARIABLE----------- */
 #background-video {
     width: 110vw;
@@ -12,6 +13,7 @@
     bottom: 0;
     z-index: -1;
 }
+
 :root {
     --body-color: rgb(250, 250, 250);
     --color-white: rgb(255, 255, 255);
@@ -23,6 +25,7 @@
     --third-color: rgb(68, 68, 68);
     --first-shadow-color: rgba(0, 0, 0, 0.1);
 }
+
 /* -------- BASE ------- */
 * {
     margin: 0;
@@ -30,10 +33,12 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+
 /*  ---------------SMOOTH SCROLL------------- */
 html {
     scroll-behavior: smooth;
 }
+
 /*------ CHANGE THE SCROLL BAR DESIGN------------ */
 ::-webkit-scrollbar {
     width: 10px;
@@ -49,6 +54,7 @@ html {
 ::-webkit-scrollbar-thumb:hover {
     background: #bbb;
 }
+
 /* -------##------REUSABLE CSS ---##-------------- */
 /* ---------------GLOBAL BUTTON DESIGN------------ */
 .btn {
@@ -69,19 +75,23 @@ html {
     background: var(--second-color);
     color: var(--color-white);
 }
+
 /* ----------------GLOBAL ICONS DESIGN ----------- */
 i {
     font-size: 16px;
 }
+
 /* -------------- BASE------------- */
 body {
     background: var(--body-color);
 }
+
 .container {
     max-width: 1200px; /* Set a max width for larger screens */
     width: 100%;
     margin: 0 auto; /* Center the container */
 }
+
 /* ------------- NAVIGATION BAR ------------- */
 nav {
     position: fixed;
@@ -98,14 +108,17 @@ nav {
     transition: 0.3s ease-in-out;
     z-index: 1000; /* Ensures it's above all other elements */
 }
+
 .nav-logo {
     position: relative;
 }
+
 .nav-name {
     font-size: 2rem; /* Use rem for responsive font size */
     font-weight: 600;
     color: var(--text-color-third);
 }
+
 .nav-logo span {
     position: absolute;
     top: -15px;
@@ -113,13 +126,16 @@ nav {
     font-size: 5em;
     color: var(--text-color-second);
 }
+
 .nav-menu .nav_menu_list {
     display: flex;
 }
+
 .nav-menu .nav_list {
     list-style: none;
     position: relative; /* Position relative for dropdown positioning */
 }
+
 .nav-link {
     text-decoration: none;
     color: var(--text-color-second);
@@ -127,6 +143,7 @@ nav {
     padding-inline: 15px;
     margin-inline: 20px;
 }
+
 /* Dropdown Menu Styles */
 .dropdown {
     display: none; /* Hide dropdown by default */
@@ -137,34 +154,42 @@ nav {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
     z-index: 100; /* Ensure it appears above other elements */
 }
+
 .nav_list:hover .dropdown {
     display: block; /* Show dropdown on hover */
 }
+
 .dropdown li {
     list-style: none; /* Remove bullet points */
 }
+
 .dropdown li a {
     padding: 10px 15px; /* Padding for dropdown items */
     display: block; /* Make the entire area clickable */
     color: var(--text-color-second); /* Text color */
     text-decoration: none; /* Remove underline */
 }
+
 .dropdown li a:hover {
     background: var(--first-color); /* Change background on hover */
     color: var(--color-white); /* Change text color on hover */
 }
+
 .nav-menu-btn {
     display: none;
 }
+
 .nav-menu-btn i {
     font-size: 28px;
     cursor: pointer;
 }
+
 .active-link {
     position: relative;
     color: var(--first-color);
     transition: 0.3s;
 }
+
 .active-link::after {
     content: "";
     position: absolute;
@@ -176,10 +201,12 @@ nav {
     background: var(--first-color);
     border-radius: 50%;
 }
+
 /*  ------ WRAPPER DESIGN ------- */
 .wrapper {
     padding-inline: 5vw; /* Use vw for responsive padding */
 }
+
 /*  ------ FEATURED BOX ------------*/
 .featured-box {
     position: relative;
@@ -187,6 +214,7 @@ nav {
     height: 100vh;
     min-height: 700px;
 }
+
 /* ----------- FEATURED TEXT BOX ------------- */
 .featured-text {
     position: relative;
@@ -198,6 +226,7 @@ nav {
     width: 50%;
     padding-left: 20px;
 }
+
 .featured-text-card span {
     background: var(--third-color);
     color: var(--color-white);
@@ -205,37 +234,45 @@ nav {
     font-size: 25px;
     border-radius: 5px;
 }
+
 .featured-name {
     font-size: 40px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-block: 20px;
 }
+
 .typedText {
     text-transform: capitalize;
     color: var(--second-color);
 }
+
 .featured-text-info {
     font-size: 15px;
     margin-bottom: 30px;
     color: var(--text-color-third);
 }
+
 .featured-text-btn {
     display: flex;
     gap: 20px;
 }
+
 .featured-text-btn > .blue-btn {
     background: var(--first-color);
     color: var(--color-white);
 }
+
 .featured-text-btn > .blue-btn:hover {
     background: var(--first-color-hover);
 }
+
 .social_icons {
     display: flex;
     margin-top: 5em;
     gap: 30px;
 }
+
 .icon {
     display: flex;
     justify-content: center;
@@ -246,9 +283,11 @@ nav {
     box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.25);
     cursor: pointer;
 }
+
 .icon:hover {
     color: var(--first-color);
 }
+
 /* --------- FEATURED IMAGE  BOX ------*/
 .featured-image {
     display: flex;
@@ -257,6 +296,7 @@ nav {
     min-height: 80vh;
     width: 50%;
 }
+
 .image {
     margin: auto 0;
     width: 380px;
@@ -265,16 +305,19 @@ nav {
     overflow: hidden;
     animation: imgFloat 7s ease-in-out infinite;
 }
+
 .image img {
     max-width: 100%; /* Ensure images are responsive */
     height: auto; /* Maintain aspect ratio */
 }
+
 @keyframes imgFloat {
     50% {
         transform: translateY(10px);
         border-radius: 45% 55% 45% 55%;
     }
 }
+
 .scroll-btn {
     position: absolute;
     bottom: 0;
@@ -292,23 +335,28 @@ nav {
     border-radius: 30px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
 }
+
 .scroll-btn i {
     font-size: 20px;
 }
+
 /* ----- MAIN BOX ------------------- */
 .section {
     padding-block: 5rem;
 }
+
 .row {
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 50px;
 }
+
 .col {
     display: flex;
     width: 50%;
 }
+
 /*  -------## --- REUSABLE CSS --- ## --- */
 .top-header {
     text-align: center;
@@ -316,15 +364,18 @@ nav {
     color: var(--text-color-second);
     margin-bottom: 10px;
 }
+
 .top-header span {
     color: #999;
 }
+
 h3 {
     font-size: 20px;
     font-weight: 600;
     color: var(--text-color-second);
     margin-bottom: 15px;
 }
+
 /*  ------- ABOUT INFO ---------- */
 .about-info {
     width: 100%;
@@ -338,6 +389,7 @@ h3 {
     box-shadow: 1px 6px 1px 2px var(--first-shadow-color);
     border-radius: 20px;
 }
+
 .about-btn button {
     position: absolute;
     right: 20px;
@@ -345,21 +397,26 @@ h3 {
     background: var(--first-color);
     border-radius: 30px;
 }
+
 .about-btn button:hover {
     background: var(--first-color-hover);
 }
+
 /*  ------- ABOUT / SKILLS BOX ---------- */
 .skills-box {
     margin: 10px;
 }
+
 .skills-header {
     margin-bottom: 30px;
 }
+
 .skills-list {
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
+
 .skills-list span {
     font-size: 14px;
     background: var(--first-color);
@@ -367,6 +424,7 @@ h3 {
     padding: 2px 10px;
     border-radius: 5px;
 }
+
 /*  ------- PROJECTS BOX ---------- */
 .project-container {
     display: flex;
@@ -374,6 +432,7 @@ h3 {
     justify-content: space-between;
     gap: 20px;
 }
+
 .project-box {
     position: relative;
     display: flex;
@@ -389,20 +448,24 @@ h3 {
     padding: 20px; /* Add padding for better spacing */
     transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition */
 }
+
 .project-box:hover {
     transform: translateY(-5px); /* Lift effect on hover */
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
     background: rgba(0, 201, 255, 0.1); /* Light background on hover */
 }
+
 .project-box > i {
     font-size: 60px; /* Increase icon size for emphasis */
     color: #0085e7;
     margin-bottom: 20px; /* Reduced margin for better spacing */
 }
+
 .project-box label {
     font-size: 16px; /* Slightly larger for better readability */
     color: #555; /* Darker color for better contrast */
 }
+
 .project-box::after {
     content: "";
     position: absolute;
@@ -413,15 +476,18 @@ h3 {
     transition: 0.4s;
     z-index: 1;
 }
+
 .project-box:hover::after {
     bottom: 0;
 }
+
 .project-box:hover i,
 .project-box:hover h3,
 .project-box:hover label {
     color: var(--color-white);
     z-index: 2;
 }
+
 /*  ------- CONTACT BOX ---------- */
 .contact-info {
     position: relative;
@@ -437,10 +503,12 @@ h3 {
     box-shadow: 1px 8px 4px 2px var(--first-shadow-color);
     overflow: hidden;
 }
+
 .contact-info > h2 {
     color: var(--color-white);
     margin-bottom: 20px;
 }
+
 .contact-info > p {
     display: flex;
     align-items: center;
@@ -448,18 +516,22 @@ h3 {
     color: var(--color-white);
     margin-block: 5px;
 }
+
 .contact-info p > i {
     font-size: 18px;
 }
+
 .contact-info::after {
     background: var(--color-white);
 }
+
 .contact-info:hover h2,
 .contact-info:hover p,
 .contact-info:hover i {
     color: #777;
     z-index: 2;
 }
+
 /*  ------- CONTACT FORM ---------- */
 .form-control {
     display: flex;
@@ -467,11 +539,13 @@ h3 {
     gap: 10px;
     width: 100%;
 }
+
 .form-inputs {
     display: flex;
     gap: 10%;
     width: 100%;
 }
+
 .input-field {
     width: 50%;
     height: 55px;
@@ -481,6 +555,7 @@ h3 {
     padding-inline: 20px;
     outline: none;
 }
+
 textarea {
     width: 100%;
     height: 250px;
@@ -490,6 +565,7 @@ textarea {
     padding: 15px 20px;
     outline: none;
 }
+
 .form-button > .btn {
     display: flex;
     align-items: center;
@@ -497,13 +573,16 @@ textarea {
     background: var(--second-color);
     color: var(--color-white);
 }
+
 .form-button > .btn:hover {
     background: #0085e7;
 }
+
 .form-button > .btn i {
     font-size: 18px;
     rotate: -45deg;
 }
+
 /*  ------- FOOTER BOX ---------- */
 footer {
     display: flex;
@@ -512,66 +591,63 @@ footer {
     flex-direction: column;
     row-gap: 30px;
     background: #f8f8f8;
-    padding-block: 20px; /* Adjust padding as needed */
-    width: 100%; /* Ensure the footer spans the full width */
-    margin-top: auto; /* Pushes the footer to the bottom of the page */
-    box-sizing: content-box; /* Ensures padding and borders are included in the width */
+    padding-block: 40px 60px;
 }
+
 .top-footer p {
     font-size: 25px;
     font-weight: 600;
-    margin: 0; /* Remove default margin for better alignment */
 }
+
 .middle-footer .footer-menu {
     display: flex;
-    justify-content: center; /* Center the menu items */
-    gap: 20px; /* Add spacing between menu items */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
 }
+
 .footer_menu_list {
     list-style: none;
 }
+
 .footer_menu_list a {
     text-decoration: none;
     color: var(--text-color-second);
     font-weight: 500;
-    transition: color 0.3s ease; /* Smooth hover effect */
+    margin-inline: 20px;
 }
-.footer_menu_list a:hover {
-    color: var(--first-color); /* Change color on hover */
-}
+
 .footer-socail-icons {
     display: flex;
-    justify-content: center; /* Center the social icons */
     gap: 30px;
-    margin: 0; /* Remove default margin */
 }
+
 .bottom-footer {
     font-size: 14px;
     text-align: center;
-    margin-top: 1px; /* Add spacing above the bottom footer */
 }
+
 /* ------- MEDIA QUERY == 1024px / RESPONSIVE ------- */
 @media only screen and (max-width: 1024px) {
     .featured-text {
         padding: 0;
         height: 100vh;
     }
+
     .image,
     .image img {
         width: 220px;
         height: 220px;
     }
 }
+
 /* ------- MEDIA QUERY == 900px / RESPONSIVE ------- */
 @media only screen and (max-width: 900px) {
     .nav-button {
         display: none;
     }
+
     .nav-menu.responsive {
         left: 0%;
     }
+
     .nav-menu {
         position: fixed;
         top: 80px;
@@ -586,19 +662,23 @@ footer {
         height: 90vh;
         transition: 0.5s;
     }
+
     .nav_menu_list {
         flex-direction: column;
     }
+
     .nav-menu-btn {
         display: flex;
         align-items: center;
         justify-content: center;
     }
+
     .featured-box {
         flex-direction: column;
         justify-content: center;
         height: 100vh;
     }
+
     .featured-text {
         width: 100%;
         order: 2;
@@ -606,9 +686,11 @@ footer {
         align-content: flex-start;
         min-height: 6vh;
     }
+
     .social_icons {
         margin-top: 3em;
     }
+
     .featured-image {
         order: 1;
         display: flex;
@@ -617,44 +699,54 @@ footer {
         width: 100%;
         margin-top: 80px;
     }
+
     .image,
     .image img {
         height: 200px;
         width: 200px;
     }
+
     .row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         gap: 50px;
     }
+
     .col {
         display: flex;
         justify-content: center;
         width: 100%;
     }
+
     .about-info,
     .contact-info {
         width: 100%;
     }
+
     .project-container {
         justify-content: center;
     }
+
     .project-box {
         width: 80%; /* Adjust width for smaller screens */
     }
 }
+
 /* ------- MEDIA QUERY == 540px / RESPONSIVE ------- */
 @media only screen and (max-width: 540px) {
     .featured-name {
         font-size: 30px; /* Adjust font size for smaller screens */
     }
+
     .project-box {
         width: 100%; /* Full width for small screens */
     }
+
     .form-inputs {
         flex-direction: column;
     }
+
     .input-field {
         width: 100%; /* Full width for input fields */
     }
